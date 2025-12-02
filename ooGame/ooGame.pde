@@ -4,6 +4,8 @@ Bone bone;
 
 Endings endings;
 
+Timer timer; 
+
 
 //initial setup
 void setup() {
@@ -12,6 +14,7 @@ void setup() {
   
   bone = new Bone();
   endings = new Endings(); 
+  timer = new Timer();
   
  
 }
