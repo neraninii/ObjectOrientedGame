@@ -2,6 +2,8 @@
 
 Bone bone;
 
+Endings endings;
+
 
 //initial setup
 void setup() {
@@ -9,6 +11,7 @@ void setup() {
   background(255);
   
   bone = new Bone();
+  endings = new Endings(); 
   
  
 }
