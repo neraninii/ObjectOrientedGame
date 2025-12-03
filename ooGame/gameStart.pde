@@ -51,6 +51,7 @@ class GameStart {
   
   void drawStart() {
     
+    
     bone.drawBones();
     
   
