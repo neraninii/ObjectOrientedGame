@@ -14,7 +14,8 @@ void setup() {
   
   bone = new Bone();
   endings = new Endings(); 
-  timer = new Timer();
+  timer = new Timer(10000);
+  timer.start();
   
  
 }
@@ -25,6 +26,17 @@ void draw() {
   
   bone.drawBones();
   
+  if (timer.finished() && bone.boneC == false 
+  && bone.boneH == false && bone.boneR == false) {
+    endings.lose();
+  }
+  
+  else if (timer.finished() && bone.boneC == true 
+  && bone.boneH == true && bone.boneR == true) {
+    endings.win();
+  }
+  
+ 
  
 }
 
