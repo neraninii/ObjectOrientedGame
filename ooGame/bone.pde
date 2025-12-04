@@ -1,6 +1,7 @@
-
+//class for the bones
 class Bone {
   
+  //declaring PImage variables 
   PImage skeletonMAIN; 
   PImage openHAND;
   PImage closeHAND;
@@ -11,6 +12,7 @@ class Bone {
   PImage rib;
   PImage ribBONE;
   
+  //declaring booleans for each bone variable
   boolean cClick = false;
   boolean hClick = false;
   boolean rClick = false;
@@ -23,6 +25,7 @@ class Bone {
   boolean boneH = false; 
   boolean boneR = false;
   
+  //loading images for the images
   Bone() {
     skeletonMAIN = loadImage("skeletonMain.PNG"); 
     openHAND = loadImage("handOPEN.PNG");
@@ -32,15 +35,14 @@ class Bone {
     humerous = loadImage("humerous.PNG");
     humerousBONE = loadImage("humerousBONE.PNG");
     rib = loadImage("rib.PNG");
-    ribBONE = loadImage("ribBONE.PNG");
-    
-    
+    ribBONE = loadImage("ribBONE.PNG"); 
   }
   
+  //function for bone visibility and equipping bones
   void drawBones() {
     image(skeletonMAIN, 0, 0);
  
-    
+    // conditionals for visibility of the bones on the skeleton
     if (boneC == true) {
       image(clavicle, 0, 0);
     }
@@ -54,7 +56,7 @@ class Bone {
     }
    
     
-    
+    //conditionals for visibility of the bones to match
      if (cBone == false) {
       image(clavicleBONE, 0, 0);
     }
@@ -68,6 +70,7 @@ class Bone {
     }
     
     
+    //conditionals to equip the bone based on click
     if (cClick == true) {
       equipBone();
       cBone = true; 
@@ -91,12 +94,12 @@ class Bone {
   }
   
   
- //equiping a bone  
+ // function for equiping a bone  
   void equipBone() {
     image(closeHAND, mouseX-50, mouseY-50);
   }
   
- // unequiping bone 
+ // function for unequiping bone 
   void unequipBone() {
     image(openHAND, mouseX-50, mouseY-50);
   }

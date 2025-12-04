@@ -1,8 +1,10 @@
-
+//class for game starting
 class GameStart {
   
+  //function for mouse conditionals
   void mouseStart() {
   
+    //conditionals to equip bones
     if (150 < mouseX && 230 > mouseX && 
     280 < mouseY && 380 > mouseY) {
       
@@ -23,6 +25,7 @@ class GameStart {
       
     }
     
+    //conditionals to match bones on the skeleton and unequipping bones
     if (bone.cClick == true && 250 < mouseX && 310 > mouseX && 
     120 < mouseY && 140 > mouseY) {
       
@@ -49,12 +52,13 @@ class GameStart {
     }
   }
   
+  //function to start the game
   void drawStart() {
     
-    
+    //calling the function to draw the bones
     bone.drawBones();
     
-  
+    //conditionals for win and lose states
     if (timer.finished() && bone.boneC == false) {
       endings.lose();
     }
@@ -70,7 +74,9 @@ class GameStart {
     }
   }
   
+  //function to restart the game
   void restart() {
+    //re-initializing variables and restarting timer
     bone.cClick = false;
     bone.hClick = false;
     bone.rClick = false;
